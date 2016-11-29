@@ -45,6 +45,18 @@ I did not recognize any patterns except for the consant use of delays throughout
 Coding wise I learned that it is much easier to break sections of code down into their own seperate areas allowing one to understand how each piece of code connects with each other. For example: the code called for a function that looked for the button to be pressed when the red LED was on. Once pressed it would reduce the delay of the lights and thus increase the difficulty with each successful button press.
 I learned that you must be patient on the protyping process and that waiting until the last moment is sure to backfire as I saw with multiple of my peers. Our prototype transfered to PCB really easily. The significant change was that we were able to chain all of our grounds together on PCB where on prototype we could not.
 
+11/28/16
+I have done all of my assignments to my knowledge. So I would say they are up to date.
+This is because I have made sure to check the journals everyday and not do my best to not fall behind the class.
 
+11/15/16
+A string is text in programming, essentially if I wanted to put out a sentence I would be using a string.
+An integer is a number in programming. Any number that is whole that you can think of is an integer.
+A method is a set of code that can be called at any point during the program after it has been made.
+We use methods so we don't have to make the same set of code over and over so that we can use one set of code for a lot of things.
 
+11/29/16
+Object oriented programming is using objects (no duh) to hold multiple values instead of using variables which only hold one value. This allows us to define a person or thing much easier. Essentially it means if I wanted to describe myself I Would use a single object containing all values that define me. Using variable would complicate that.
+We use objects to define things that require multiple values as stated above.
+3 advantages of object oriented programming is the ability to call on one thing very easily and you don't have to recreate the code for everything if you want to use it again. Another advantage is that it is much easier to maintenence over time as their is only one area you would have to look at in order to change and refine the section of code. The final large advantage I could find was that it made massive coding projects smaller as you didn't need to rewrite code which cut down on how many lines of code you would have to make making it more easily understandable.
 
