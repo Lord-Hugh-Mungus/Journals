@@ -1,0 +1,19 @@
+A method is a collection of statements that are put together to perform an operation.
+
+	A method:
+student nerd = new student();
+nerd.setName("Nerdy");
+nerd.getName();
+This is an example of a method.
+
+Return types are things that return values of a variable that has been set.
+For example:
+String getName(){  //Notice - String describes what we are returning
+  return this.name;
+  // This is "returning" a value to where it's called it's not actually printing
+  //
+}
+To pass values to a method it would be something like this: 
+int variable(int num goes here) {
+It would tell the method which number it uses so if it was 5 the method would pick up the number 5
+}

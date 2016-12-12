@@ -1,0 +1,4 @@
+12/12/16
+
+The code creates a 2d space for us to move a character on both axises x and y.
+To make the D move to the bottom left, we would have to put the following coordinates: [10][0]

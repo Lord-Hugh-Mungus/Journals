@@ -1,0 +1,7 @@
+11/10/16
+Coding wise I learned that it is much easier to break sections of code down into their own seperate areas allowing one to understand how each piece of code connects with each other.
+For example: the code called for a function that looked for the button to be pressed when the red LED was on. Once pressed it would reduce the delay of the lights and thus increase
+the difficulty with each successful button press.
+I learned that you must be patient on the protyping process and that waiting until the last moment is sure to backfire as I saw with multiple of my peers. Our prototype transfered to
+PCB really easily. The significant change was that we were able to chain all of our grounds together on PCB where on prototype we could not.
+

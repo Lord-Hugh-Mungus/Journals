@@ -1,0 +1,5 @@
+11/30/16
+The difference between an object and a variable is that an object can hold many values while a variable can only hold one value.
+The difference between a class and an object is that a class is like a recipe and an object is the end result.
+To instantiate an object in Java you put new in front of it.
+
