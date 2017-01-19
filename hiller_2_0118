@@ -1,0 +1,232 @@
+package hiller_2d_array;
+import java.util.Random;
+import java.util.Scanner;
+
+
+
+ public class Hiller_2D_arraygame {
+static Trap[] mineField = new Trap[5];
+   public static void main(String []args) {
+     Goodguy sonic = new Goodguy(2, 3);
+     //Badguy sanic = new Badguy(2, 4);
+     
+     Trap bomb = new Trap(1,1);
+     
+     Random randy = new Random();
+     
+     for (int i = 0; i < 5; i++){
+         mineField[i] = new Trap(randy.nextInt(10),randy.nextInt(10));
+     }
+     Scanner scanner1=new Scanner(System.in);
+     System.err.println("Welcome to the end of the line.");
+    while(sonic.isAlive){
+     char [][] landscape= new char[10][10];
+     
+     System.out.println("Would you like to move North, South, West, or East?");
+     String move = scanner1.nextLine();
+     System.out.printf("You said %s .\n", move);
+     sonic.nav(move);
+     landscape[sonic.getX()][sonic.getY()] = sonic.getSymbol();
+     
+     for (int i = 0; i < 5; i++){
+         landscape[mineField[i].y][mineField[i].x] = bomb.getSymbol();
+     }
+     
+     
+     /*landscape[sanic.getX()][sanic.getY()] = sanic.getSymbol();
+     landscape[3][1] = '%';
+     landscape[4][1] = '%';
+     landscape[5][1] = '%';
+     landscape[6][1] = '%';  
+     landscape[7][1] = '%';
+     landscape[7][2] = '%';
+     landscape[7][3] = '%';
+     landscape[7][4] = '%';
+     landscape[7][5] = '%';
+     landscape[3][6] = '%';
+     landscape[3][5] = '%';
+     landscape[3][4] = '%';
+     landscape[3][3] = '%';
+     landscape[5][4] = '%';*/
+     for (int i = 0; i <= landscape[0].length - 1; i++) {
+      for (int j = 0; j <= landscape[1].length - 2; j++) {
+         if (landscape[i][j] == 0 ) {
+             System.out.print(".");
+           } else {
+           System.out.print(landscape[i][j]);
+              }
+            }
+      System.out.println("|");
+     }
+        //sonic.moveX(landscape);
+       /* if (landscape[sanic.getSymbol()] == landscape[sonic.getX()]) {
+            System.out.println("Game Over");
+         }*/
+        }
+   
+     
+            
+      }                                   //MAIN ENDS HERE
+   static class Trap{
+       int x, y;
+       boolean isActive=true;
+       char symbol = '%';
+       
+            public Trap(int a, int b){
+                this.x=a;
+                this.y=b;
+                this.symbol='%';
+            }
+            int getX(){
+                return this.x;
+            }
+            int getY(){
+                return this.y;
+            }
+            char getSymbol(){
+                return this.symbol;
+            }
+            boolean getisActive(){
+                return this.isActive;
+            }
+            void goBoom(){
+                isActive = false;
+            }
+   }                                        //TRAP ENDS HERE 
+   static class Goodguy{
+      char symbol = '@';    
+      int x, y;
+      boolean isAlive=true;
+
+   
+      public Goodguy(int a, int b){
+        this.x = b;
+        this.y = a;
+      }
+      char getSymbol(){
+        return this.symbol;
+      }
+      int getX(){
+        return this.x;
+      }
+      int getY(){
+        return this.y;
+      }
+      void moveSouth(){
+          this.x+=1;
+      }
+      void moveNorth(){
+          this.x-=1;
+      }
+      void moveWest(){
+          this.y-=1;
+      }
+      void moveEast(){
+          this.y+=1;
+      }
+     void nav(String move){
+         move = move.toLowerCase();
+         if (move.startsWith("e")){
+         System.err.println("You are moving East.");
+         this.moveEast();
+         }
+         if (move.startsWith("w")){
+         System.err.println("You are moving West.");
+         this.moveWest();
+         }
+         if (move.startsWith("n")){
+         System.err.println("You are moving North.");
+         this.moveNorth();
+         }
+         if (move.startsWith("s")){
+         System.err.println("You are moving South.");
+         this.moveSouth();
+         }
+         this.checkforTrap();
+         }
+          void checkforTrap(){
+              for (int i = 0; i < 5; i++){
+          if (mineField[i].getisActive() == true){
+          if (mineField[i].getX() == this.getX() && mineField[i].getY() == this.getY()){
+          System.out.println("BOOM");
+          System.out.println("You died to a bomb.");
+          isAlive = false;
+          
+          }else{
+                  System.out.println("");
+                  }
+     }
+    }
+   }
+  }                         //HERO ENDS HERE
+ }                          //PUBLIC CLASS ENDS HERE
+     
+    
+    //We use the class constructor to create a hedgehog and set values at the same time.
+      //some getters and setters
+
+      //It's void because you aren't returning anything!
+      
+      // void moveX(char [] l){
+      //   if(this.x < l.length) {this.x+=1;}
+      //   //we set the value of x to it's current value plus 1
+      // }
+     
+   /*}
+    static  class Badguy{
+      char symbol = '#';    // NOTICE chars use single quotes
+      int x, y;
+
+      //Now we'll add a class constructor
+      public Badguy(int a, int b){
+       this.x = a;
+        this.y = b;
+      }
+    //We use the class constructor to create a hedgehog and set values at the same time.
+      //some getters and setters
+
+      //It's void because you aren't returning anything!
+      void setX(int a){
+        this.x= a;
+      }
+      void setY(int b){
+        this.y= b;
+      }
+      // void moveX(char [] l){
+      //   if(this.x < l.length) {this.x+=1;}
+      //   //we set the value of x to it's current value plus 1
+      // }
+      char getSymbol(){
+        return this.symbol;
+      }
+      int getX(){
+        return this.x;
+      }
+      int getY(){
+        return this.y;
+      }
+    }
+ }
+/*
+Beginning with this file
+1. Name the file correctly
+2. Create a hero/player class --- like student, teacher, hedgehog, or fox
+3. Create code to display and move the hero
+4. Create an adversary class --- like student, teacher, hedgehog, or fox
+5. Create code to display and move the adversary
+6. Create hidden 'traps' - use "if, else" to check if the hero intersects a trap
+7. READ THE RUBRIC FOR WHAT SHOULD BE ADDED [Don't worry about controlling the character with the keyboard, yet - we'll talk about that on Wednesday]
+*/
+
+/*
+1. How do you use Netbeans to check where a curly brace ends? Why would you do that?
+You can use Netbeans to check where a curly brace ends by clicking on a curly brace (next to it) and it will highlight the two
+braces that go together.
+You would want to do this to check which brace goes with which brace so you can see where each piece of code ends,
+say for example a void. We don't want our void to use the last brace in the code or else our public class can't close itself and
+the code won't work.
+
+2. Why does the game have static Trap [] minefield before main?
+As you said before we have static Trap [] mineField before main so every code in the game can use that code and what relates
+to it.
+*/
