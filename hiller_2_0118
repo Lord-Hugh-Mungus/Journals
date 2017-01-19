@@ -6,7 +6,7 @@ import java.util.Scanner;
 
  public class Hiller_2D_arraygame {         //OVERARCHING CLASS STARTS HERE (public starts here)
  static Trap[] mineField = new Trap[5];
-   public static void main(String []args) {
+   public static void main(String []args) {       //MAIN STARTS HERE
      Goodguy sonic = new Goodguy(2, 3);
      //Badguy sanic = new Badguy(2, 4);
      
@@ -67,7 +67,7 @@ import java.util.Scanner;
      
             
       }                                   //MAIN ENDS HERE
-   static class Trap{
+   static class Trap{                  //TRAP STARTS HERE
        int x, y;
        boolean isActive=true;
        char symbol = '%';
@@ -93,7 +93,7 @@ import java.util.Scanner;
                 isActive = false;
             }
    }                                        //TRAP ENDS HERE 
-   static class Goodguy{
+   static class Goodguy{    //HERO STARTS HERE
       char symbol = '@';    
       int x, y;
       boolean isAlive=true;
