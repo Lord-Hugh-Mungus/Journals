@@ -228,5 +228,5 @@ the code won't work.
 
 2. Why does the game have static Trap [] minefield before main?
 As you said before we have static Trap [] mineField before main so every code in the game can use that code and what relates
-to it.
+to it. Essentially it lets all things in our game (code) call it up and use it to varying degrees.
 */
