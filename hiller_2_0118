@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 
 
- public class Hiller_2D_arraygame {
-static Trap[] mineField = new Trap[5];
+ public class Hiller_2D_arraygame {         //OVERARCHING CLASS STARTS HERE (public starts here)
+ static Trap[] mineField = new Trap[5];
    public static void main(String []args) {
      Goodguy sonic = new Goodguy(2, 3);
      //Badguy sanic = new Badguy(2, 4);
@@ -159,7 +159,7 @@ static Trap[] mineField = new Trap[5];
     }
    }
   }                         //HERO ENDS HERE
- }                          //PUBLIC CLASS ENDS HERE
+ }                          //OVERARCHING CLASS ENDS HERE (public class)
      
     
     //We use the class constructor to create a hedgehog and set values at the same time.
