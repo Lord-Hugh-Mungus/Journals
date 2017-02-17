@@ -1,0 +1,16 @@
+1. Having read the rubric I am going to make Galaga for my art, maybe create my own custom moon in the background.
+I am also considering creating custom colors for the player ship instead of the original white and red.
+2. Five methods I am going to end up making will be the moon, stars, player ship, enemies, and a background of some sort along with
+creating a method to show lives in one corner.
+3. I might add a for loop like this:  
+        for (int i = 0; i < 60; i++) {
+            gc.setFill(Color.PURPLE);
+            gc.fillRect(rand1.nextInt(1500), rand1.nextInt(1000), 5, 5);
+        }
+That would be how I create my stars.
+4. I will add a random to my code like how I did in my for loop by pushing the random value to an int so it could be used by the double
+values of javaFX shapes. To create the random: Random rand1 = new Random();
+5.I could add an if statement to check that when stars are at 60 or 59 I create an asteroid field or a moon.
+          if (stars.equals 60){
+              moon(gc);
+          }
