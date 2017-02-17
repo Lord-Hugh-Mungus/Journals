@@ -1,7 +1,7 @@
-What are methods? What are they good for?
-
-Programming graphics can be difficult. Why?
-
+1. A method is an object in Java. They are good for creating a section of code that can be reused multiple times instead of
+having to recreate the code each time we want to use it.
+2. Programming graphics can be difficult because graphics don't use all the standard Java code and that graphics work in doubles
+making certain inputs invalid as doubles only work with a few inputs.
 What is a Java library? What are they good for? Why do we use them?
 
 How do we import a Java library? Give an example. 
