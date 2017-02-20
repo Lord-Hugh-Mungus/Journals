@@ -1,5 +1,14 @@
 What is a Java class?
-
+A Java class is kind of like a blueprint or container which is able to hold things within it, aka code, values, methods, etc.
 What might a Java class be for JavaFX?
-
+A Java Class for JavaFX would be something like:
+public class square{
+void drawSquare(){
+fillRect(10,10,10);
+}
+}
 What might be a method for class? 
+A method for a class is literally the void I put inside the class above:
+void drawSquare(){
+fillRect(10,10,10);
+}
