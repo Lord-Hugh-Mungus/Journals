@@ -15,12 +15,17 @@ First off we have to understand how each ghost works and their attack pattern.
 In Pac-Man there are attack modes/waves which the ghosts follow regardless of level.
 - - - Modes - - -
 The Ghosts have two modes: attack and scatter modes. Generally the start of either mode will
-be signaled by the Ghosts all reversing/changing direction within a couple of moments between each other.
+be signaled by the Ghosts all reversing direction within a couple of moments between each other.
 - Attack -
 The Attack mode refers to when the ghosts are actively attempting to collide/kill Pac-Man.
 - Scatter -
 The Scatter mode refers to when the ghosts are not chasing after/attempting to kill Pac-Man although Blinky may still occasionally 
 ignore the scatter mode and continue following Pac-Man.
+- Prey Mode -
+Prey mode is initiated by Pac-Man eating a power pill which will make the ghosts turn blue and try to get away from Pac-Man 
+regardless of their personalities and the ghosts will move more slowly while in Prey mode as well. This is the only mode that when it 
+is ended/changed to another mode that the ghosts will not reverse direction. Prey mode also pauses the scatter or attack timer and 
+when Prey ends the ghosts enter the mode they were in before going into Prey mode.
 - - - Waves - - -
 The ghosts go in waves of attack and scatter modes based soley on a timer and nothing Pac-Man does.
 - Waves Timing -
