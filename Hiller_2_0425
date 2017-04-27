@@ -99,6 +99,30 @@ will allow the player to predict the paths of the ghosts.
 
 Explain with code, how you will keep ghosts from moving through walls
 -----------------------------------------------------------------------------------------------------------------------------
+This is quite simple actually. Take a look at the code below:
+if (checkbounds(ghost_name_here)){
+  if (ghost_name_here.direction == "direction_string_here,e.g. right"){
+    ghost_name_here.set(variable here, either x or y)(ghost_name_here.get(variable here)() - 10);
+  }
+}
+
+And use that code a few too many times and the ghost will not go through walls just have to make a small addition to checkbounds by
+adding the ghost name to it and making sure that it lines up.... I am going to have to experiment with it more before I can give
+a more well developed answer.
 
 Explain with code how you will have the ghosts move towards Pacman
 -----------------------------------------------------------------------------------------------------------------------------
+Ok... I am going to make the code for Blinky here only as his code will be used as a base to make the Ghosts that aren't like
+Blinky in movement go towards Pac-man. In general it will just base the ghost's current x and y against Pac-Man's x and y location
+and if Pac-Man is differing on those values the Ghost will move accordingly to make those values match up.
+
+Code snippet:
+if (ghost_name_here.get(VARIABLE)() > pacman.getCenter(VARIABLE)()){
+  ghost_name_here.move(ACCORDINGLY, e.g. Down)();
+}
+
+This is of course assuming I have created the Ghost's classes etc. along with the move stuff (moveDown, etc.). Pretty much add more 
+for what it checks for so instead of checking for more than, check for less than on the Y or X etc.
+
+Again, I can't elaborate well here as I have yet to actually create a ghost, but I do understand that I will have to make the Ghosts
+deal with walls as well which I am still coming up with a solution to.
