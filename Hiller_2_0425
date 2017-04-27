@@ -8,7 +8,8 @@ Explain how to make ghosts move. Provide code for:
 Using a for loop in conjunction with an ArrayList to make ghosts move with the method move()
 -----------------------------------------------------------------------------------------------------------------------------
 Actually, I have a different way of creating ghosts as I want to get as close to the original pacman game as I can, as such I will
-describe how I plan to do this and some psuedo code that might assist in understanding.
+describe how I plan to do this some psuedo code that might assist in understanding, and ALL behaviors etc. that apply to the ghosts
+in Pac-Man.
 First off we have to understand how each ghost works and their attack pattern.
 = = = ATTACK WAVES/PATTERNS = = =
 In Pac-Man there are attack modes/waves which the ghosts follow regardless of level.
@@ -30,6 +31,18 @@ leaving their "base". The first scatter mode/phase (when the ghosts leave their 
 second attack phase which then leads into another 7 second scatter phase which then leads into another 20 second attack phase
 which then leads into a 5 second scatter phase then into another 20 second attack phase which will again lead into another
 5 second attack phase and then finally leads into an infinite attack phase.
+Here is a chart of Wave timing:
+================================================================================================================================
+|-   MODE    - - Duration -                                                                                                    |
+|-  scatter  - - 7 seconds  -                                                                                                  |
+|-  attack   - - 20 seconds -                                                                                                  |
+|-  scatter  - - 7 seconds  -                                                                                                  |
+|-  attack   - - 20 seconds -                                                                                                  |
+|-  scatter  - - 5 seconds  -                                                                                                  |
+|-  attack   - - 20 seconds -                                                                                                  |
+|-  scatter  - - 5 seconds  -                                                                                                  |
+|-  attack   - - Infinite   -                                                                                                  |                                                                                |
+================================================================================================================================
 = = = PERSONALITIES = = = 
 Each ghost has their own "personality" which I will sum up below:
 - - - BLINKY - - -
@@ -52,7 +65,17 @@ Here is the chart of when he goes ito what I will call 'Sanic mode':
 |-  10   - - 60 Pellets Remaining -                                                                                           |
 |-  11+  - - UNKNOWN Pellets Remaining -                                                                                      |
 ===============================================================================================================================
-
+- - - Pinky - - -
+Pinky moves at a set constant speed like Inky and Clyde. Pinky is usually the first ghost to reverse when switching modes and can be
+a pretty consistent tell-tale of when scatter and attack waves are switching. Pinky generally goes counterclockwise around the
+walls on the map and Pinky will move in Pac-Man's general direction.
+- - - Inky - - -
+Inky is pretty generic. He is very similar to Pinky, but doesn't reverse instantly upon the switching of modes. The only distinctive
+qualities of Inky is that instead of going counterclockwise around walls like Pinky he will generally go clockwise around walls and is
+the most unpredictable ghost in Pac-Man.
+- - - Clyde - - -
+Clyde is generally not a threat, he will often turn off away from Pac-Man if charged instead of moving towards Pac-Man making
+Clyde unpredictable in some ways, because if he doesn't turn off it usually means a quick death.
 Explain with code, how you will keep ghosts from moving through walls
 -----------------------------------------------------------------------------------------------------------------------------
 
