@@ -1,1 +1,60 @@
+Why would we create checkbounds() to accept different shapes?
+-----------------------------------------------------------------------------------------------------------------------------
+We would create checkbounds() to accept different shapes so we can check the bounds of something beyond pacman
+which allows us to use one set of code for collisions instead of creating code for each shape we want
+to check collisions on such as Ghosts.
 
+Explain how to make ghosts move. Provide code for:
+Using a for loop in conjunction with an ArrayList to make ghosts move with the method move()
+-----------------------------------------------------------------------------------------------------------------------------
+Actually, I have a different way of creating ghosts as I want to get as close to the original pacman game as I can, as such I will
+describe how I plan to do this and some psuedo code that might assist in understanding.
+First off we have to understand how each ghost works and their attack pattern.
+= = = ATTACK WAVES/PATTERNS = = =
+In Pac-Man there are attack modes/waves which the ghosts follow regardless of level.
+- - - Modes - - -
+The Ghosts have two modes: attack and scatter modes. Generally the start of either mode will
+be signaled by the Ghosts all reversing/changing direction within a couple of moments between each other.
+- Attack -
+The Attack mode refers to when the ghosts are actively attempting to collide/kill Pac-Man.
+- Scatter -
+The Scatter mode refers to when the ghosts are not chasing after/attempting to kill Pac-Man although Blinky may still occasionally 
+ignore the scatter mode and continue following Pac-Man.
+- - - Waves - - -
+The ghosts go in waves of attack and scatter modes based soley on a timer and nothing Pac-Man does.
+- Waves Timing -
+The attack modes are all 20 seconds long with the exception of the last attack wave which is infinite and will not end until 
+either Pac-Man dies and loses a life upon which the wave timer will reset and the waves will begin again or when Pac-Man 
+successfully collects all of the pellets and power pellets. Scatter mode is the first mode in which the ghosts start in once 
+leaving their "base". The first scatter mode/phase (when the ghosts leave their base) is 7 seconds long which leads into a 20 
+second attack phase which then leads into another 7 second scatter phase which then leads into another 20 second attack phase
+which then leads into a 5 second scatter phase then into another 20 second attack phase which will again lead into another
+5 second attack phase and then finally leads into an infinite attack phase.
+= = = PERSONALITIES = = = 
+Each ghost has their own "personality" which I will sum up below:
+- - - BLINKY - - -
+Blinky is very interesting actually. Blinky begins moving at the exact same speed as all of the other ghosts, but he speeds up
+after a certain amount of pellets have been eaten by Pac-Man and it also depends on which level as on different levels he will
+speed up with less and less pellets eaten. He is also the main attacker of Pac-Man throughout the game, he is the only ghost that
+will actually actively track Pac-Man's exact position and attempt to catch up with Pac-Man. 
+Here is the chart of when he goes ito what I will call 'Sanic mode':
+===============================================================================================================================
+|- LEVEL - - Blinky Goes Into Sanic Mode After Dots Remaining -                                                               |
+|-   1   - - 20 Pellets Remaining -                                                                                           |
+|-   2   - - 30 Pellets Remaining -                                                                                           |
+|-   3   - - 40 Pellets Remaining -                                                                                           |
+|-   4   - - 40 Pellets Remaining -                                                                                           |
+|-   5   - - 40 Pellets Remaining -                                                                                           |
+|-   6   - - 50 Pellets Remaining -                                                                                           |
+|-   7   - - 50 Pellets Remaining -                                                                                           |
+|-   8   - - 50 Pellets Remaining -                                                                                           |
+|-   9   - - 60 Pellets Remaining -                                                                                           |
+|-  10   - - 60 Pellets Remaining -                                                                                           |
+|-  11+  - - UNKNOWN Pellets Remaining -                                                                                      |
+===============================================================================================================================
+
+Explain with code, how you will keep ghosts from moving through walls
+-----------------------------------------------------------------------------------------------------------------------------
+
+Explain with code how you will have the ghosts move towards Pacman
+-----------------------------------------------------------------------------------------------------------------------------
