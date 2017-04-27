@@ -49,6 +49,7 @@ Here is a chart of Wave timing:
 |-  attack   - - Infinite   -                                                                                                  |                                                                                |
 ================================================================================================================================
 = = = PERSONALITIES = = = 
+All of the ghosts will turn their eyes to the direction they will be moving in shortly before turning a corner.
 Each ghost has their own "personality" which I will sum up below:
 - - - BLINKY - - -
 Blinky is very interesting actually. Blinky begins moving at the exact same speed as all of the other ghosts, but he speeds up
