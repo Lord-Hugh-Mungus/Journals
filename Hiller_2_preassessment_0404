@@ -1,0 +1,55 @@
+For each of the following provide 1.) a definition in complete sentences and 
+2.) a specific ACTUAL code example from your game
+= = = Integer = = =
+Definition: Any number such as 1,2,3.... and so on.
+Generally we can define integers to letters or full words (strings) by doing the following:
+int a = 0;
+
+This sets the letter a to the value 0 and that can be manipulated by other code.
+
+An example piece of code from my game would be: 
+int score = 0;
+
+This piece of code is responsible for setting my starting score and then accepting any 
+input to change it from other code in my game.
+
+= = = Counter = = =
+Definition: A counter is an integer that "counts" up or down using integers.
+Counters can be used to measure time (an obvious implementation) or to count how many times something has occured,
+e.g. tracking score based on how many enemies killed or items collected.
+A simple Counter can be shown below:
+static int i = 0;
+//Static int i is created here so the void below can use it and keep in mind i is an integer
+public void countup(){
+int i++;
+//int i++ counts up forever. All it says here is to add 1 to i. We would have to call the void countup() of course to
+//use the counter of course.
+}
+
+
+An example piece of code from my game would be:
+for (int i = 0; i < entities.size(); i++) {
+                Entity entity = (Entity) entities.get(i);
+                entity.draw(g);
+}
+Entity is an image in my game or rather a list of images. What it is checking for is if my integer i is smaller 
+than/less than the size of my entities on screen then it should increase by one until it is of equal size and 
+when that occurs it will go ahead and put my entities on screen.
+
+= = = Class = = =
+Definition: A class is literally a placeholder/template for creating different objects in java. Objects have the
+Definition(cont.): properties defined by their classes.
+
+= = = Object = = =
+
+= = = Instance = = =
+
+= = = ArrayList = = =
+
+= = = Declaration = = =
+
+= = = Initialization = = =
+
+= = = Boolean = = =
+
+= = = For loop = = =
