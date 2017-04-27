@@ -39,6 +39,11 @@ when that occurs it will go ahead and put my entities on screen.
 = = = Class = = =
 Definition: A class is literally a placeholder/template for creating different objects in java. Objects have the
 Definition(cont.): properties defined by their classes.
+An example of a very simple class would be:
+class library{
+
+}
+
 
 = = = Object = = =
 
