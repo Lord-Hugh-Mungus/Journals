@@ -82,6 +82,21 @@ the most unpredictable ghost in Pac-Man.
 - - - Clyde - - -
 Clyde is generally not a threat, he will often turn off away from Pac-Man if charged instead of moving towards Pac-Man making
 Clyde unpredictable in some ways, because if he doesn't turn off it usually means a quick death.
+= = = Explanation = = =
+So... there is a lot to do. As you might have gathered from that I can't just create and arraylist and have the ghosts use a single
+class as they all act differently from one ghost to the next. This means I will have to create individual classes for each ghost
+so I can create a custom AI for them with some of my own touches of course. I am going to have to give the ghosts that move in
+the general direction of Pac-Man code to track Pac-Man's position with some randomness added in by a random. By far Blinky will
+be the easiest ghost to code for as we have practically coded him before in our 2d array game just without consideration for
+walls. I am generally just going to have Blinky move towards Pac-Man based on whether or not Pac-Man is further one direction
+relative to Blinky. For Clyde I will have him use practically the exact same code with a catch, he will base whether or not to
+"run away" from Pac-Man on a random value that leans more towards running away. Pinky is going to be VERY difficult to code as
+his movement will be based more on walls than Pac-Mans actual movement. I believe I can get Pinky going counterclockwise around
+the walls by forcing him to the left as much as possible with a little wiggle room to keep him close to Pac-Man and not on the far
+left side of the map. I can get Inky to work by using code opposite to Pinky so he goes clockwise instead. For the eyes I can have
+the Ghosts have a tenth of a second delay before moving in a direction and have the eyes point in that direction instantly which
+will allow the player to predict the paths of the ghosts. 
+
 Explain with code, how you will keep ghosts from moving through walls
 -----------------------------------------------------------------------------------------------------------------------------
 
