@@ -42,10 +42,18 @@ Definition(cont.): properties defined by their classes.
 An example of a very simple class would be:
 class library{
 
+//all code for class in here....
 }
+An example piece of code from my game would be:
+
 
 
 = = = Object = = =
+Definition: Objects are very similar to real world objects such as say a lamp. A lamp only has two states: on and off
+and nothing else. Objects are similar in this way, they are an actual tangible thing within java and they hold various
+variables within them.
+
+An example piece of code from my game would be:
 
 = = = Instance = = =
 
