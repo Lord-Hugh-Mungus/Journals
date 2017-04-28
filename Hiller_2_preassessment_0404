@@ -14,7 +14,7 @@ This piece of code is responsible for setting my starting score and then accepti
 input to change it from other code in my game.
 
 = = = Counter = = =
-Definition: A counter is an integer that "counts" up or down using integers.
+Definition: A counter is an integer that "counts" up or down.
 Counters can be used to measure time (an obvious implementation) or to count how many times something has occured,
 e.g. tracking score based on how many enemies killed or items collected.
 A simple Counter can be shown below:
