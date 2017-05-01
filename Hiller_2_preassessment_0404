@@ -79,16 +79,86 @@ static class Hero extends Rectangle{
         	return this.TheScore;
     	}
    	 
-	}
+}
 
 = = = Instance = = =
+Definition: It is the relationship between say value X which is an instance of value Y. Where X is what is created and Y
+holds all the variables/values for instance X to use. Often instances are synonymous with object.
+
+An example piece of code from my game would be:
+Base on my understanding this is an "instance",
+static class laser extends Rectangle{
+    	int movespeed = 200;
+    	boolean hit = false;
+    	int score = 0;
+   	 
+    	public laser(int x, int y){
+        	this.setX(x);
+        	this.setY(y);
+        	this.setHeight(5);
+        	this.setWidth(5);
+        	this.setFill(Color.RED);
+       	 
+
+    	}
+}
 
 = = = ArrayList = = =
+Definition: It is a list of objects that are created in a class with values set by the arraylist. Often arraylists are used
+to call objects multiple times to create several instances of them so one doesn't have to code multiple classes to show
+the exact same thing and instead put it into an arraylist which lightens work loads.
+
+An example piece of code from my game would be:
+static ArrayList<BadBlock> badblockz = new ArrayList();
+That creates a new arraylist assigning the class badblock into an array named badblockz.
+The associated class:
+class BadBlock extends Rectangle{
+    	boolean movedown = true;
+   	 
+    	public BadBlock(int x, int y){
+        	this.setX(x);
+        	this.setY(y);
+        	this.setWidth(15);
+        	this.setHeight(15);
+        	this.setFill(Color.BISQUE);
+    	}
+}
+
 
 = = = Declaration = = =
+Definition: Declaration pretty much say that something exists. They don't create any values for that thing or anything that
+might define the class. They just say that it was created and exists.
+
+An example piece of code from my game would be:
+static Hero fighter;
+This just declares that Hero fighter exists.
 
 = = = Initialization = = =
+Definition: Things that cause some code to be executed when an object is created. Often initializers aer set to a value like 
+an integer.
+
+An example piece of code from my game would be:
+rect = new Rectangle(150, 50, 25, 25);
+When rect is creaetd it is given the values 150, 50, 25, 25 by the initializer.
 
 = = = Boolean = = =
+Definition: Something that sets a value to true or false which can be checked for later in the code.
 
+An example piece of code from my game would be:
+boolean movedown = true;
+movedown gets set to true. Notice how boolean is ahead of movedown which says that movedown is a boolean piece of code.
 = = = For loop = = =
+Definition: A for loop deals with iteration which constantly loops based on integers or other variables and can be used to 
+count up or down and to stop counting when a certain integer value is attained by the loop.
+
+An example piece of code from my game would be:
+for (Rectangle badblock : badblockz) {
+        	if (fighter.getBoundsInParent().intersects(badblock.getBoundsInParent())) {
+            	collisionDetected = true;
+            	TheScore += .05;
+            	badblock.setFill(Color.RED);
+            	scoredisplay.setText("Score" + (int)TheScore);
+        	}
+}
+
+This for loop checks the array badblockz for collision which will determine score and color of badblock.
