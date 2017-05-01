@@ -45,15 +45,41 @@ class library{
 //all code for class in here....
 }
 An example piece of code from my game would be:
-
+static class Hero extends Rectangle{
+//All code for it here
+}
 
 
 = = = Object = = =
 Definition: Objects are very similar to real world objects such as say a lamp. A lamp only has two states: on and off
 and nothing else. Objects are similar in this way, they are an actual tangible thing within java and they hold various
-variables within them.
+variables within them. Objects are classes with all variables assigned and all potential things you might need for
+your object created in the class.
 
 An example piece of code from my game would be:
+static class Hero extends Rectangle{
+    	int health = 50;
+    	int TheScore = 0;
+   	 
+    	public Hero(int x, int y){
+        	this.setX(x);
+        	this.setY(y);
+        	this.setHeight(15);
+        	this.setWidth(15);
+        	this.setFill(Color.DARKGOLDENROD);
+      	 
+     	 
+    	}
+   	 
+    	public void setTheScore(int i){
+        	this.TheScore = i;
+    	}
+   	 
+    	public int getTheScore(){
+        	return this.TheScore;
+    	}
+   	 
+	}
 
 = = = Instance = = =
 
